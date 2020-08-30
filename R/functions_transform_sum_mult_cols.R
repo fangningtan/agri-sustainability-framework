@@ -18,7 +18,7 @@ sum_mult_cols<-function(my_df, var_prefix){
     rowSums(na.rm = T) %>% 
     #Save the output sum as a dataframe column
     as.data.frame() %>% 
-    #Rename the output column [var_prefix]Sum
-    set_names(paste0(var_prefix,"Sum")) 
+    #Rename the output column [var_prefix]_sum
+    set_names(paste0(var_prefix,"_sum")) 
   
 }
