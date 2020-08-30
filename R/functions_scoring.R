@@ -56,7 +56,7 @@ bin_scoring <- function(var_name, single_var_config, my_df){
   colnm <- single_var_config[["colnm"]]
   
   #2. Save the bin lower bound values to a list
-  bins = single_var_config[["bin.lowers"]]
+  bins = single_var_config[["bin_lowers"]]
   
   #3. Save the corresponding scores of the bins to another list
   scores = single_var_config[["scores"]]
