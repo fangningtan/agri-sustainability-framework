@@ -25,7 +25,7 @@ bin_scoring_row <- function(x, single_var_config){
   #args: x (numeric value), single_var config list
   
   #1. Save the bin lower bound values to a list
-  bins = single_var_config[["bin.lowers"]]
+  bins = single_var_config[["bin_lowers"]]
   
   #2. Save the corresponding scores of the bins to another list
   scores = single_var_config[["scores"]]
