@@ -10,10 +10,10 @@ sum_mult_cols<-function(my_df, var_prefix){
   #The function can be mapped over a list containing all the variable prefixes.
   
   my_df %>% 
-    select(contains(var_prefix)) %>% 
+    select(contains(paste0(var_prefix,"_", var_prefix))) %>% 
     #Exclude the columns [var_prefix]0 and [var_prefix]99 because they represent 'None' and 'Other' responses respectively
-    select(-matches(paste0(var_prefix,0))) %>%
-    select(-matches(paste0(var_prefix,99))) %>% 
+    select(-matches(paste0(var_prefix,"_", var_prefix,0))) %>%
+    select(-matches(paste0(var_prefix,"_",var_prefix,99))) %>% 
     #Sum the rest of columns
     rowSums(na.rm = T) %>% 
     #Save the output sum as a dataframe column
