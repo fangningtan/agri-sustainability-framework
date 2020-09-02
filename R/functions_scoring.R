@@ -101,5 +101,5 @@ scoring<-function(name, single_config, my_df){
   switch(function_type,
          linear = linear_scoring(name, single_config, my_df),
          bin = bin_scoring(name, single_config, my_df),
-         mean = mean_scoring(name, single_config, my_df))
+         aggregate = mean_scoring(name, single_config, my_df))
 }
